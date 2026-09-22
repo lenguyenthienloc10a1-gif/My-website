@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 25. Title riêng biệt (50–60 ký tự, chứa tên) -->
+    <title>Liên Hệ Với Tôi - Lê Nguyễn Thiện Lộc Portfolio</title>
+    
+    <!-- 26. Meta description (150–160 ký tự, bắt đầu bằng hành động) -->
+    <meta name="description" content="Liên hệ ngay với Lê Nguyễn Thiện Lộc qua biểu mẫu trực tuyến, email hoặc số điện thoại để trao đổi công việc, hợp tác dự án và tư vấn học tập nhanh chóng.">
+    
+    <!-- 34 (Nâng cao). Open Graph Meta Tags -->
+    <meta property="og:title" content="Liên Hệ Với Tôi - Lê Nguyễn Thiện Lộc Portfolio">
+    <meta property="og:description" content="Liên hệ ngay với Lê Nguyễn Thiện Lộc qua biểu mẫu trực tuyến hoặc email để trao đổi công việc và học tập.">
+    <meta property="og:type" content="website">
+</head>
+<body>
+
+    <header>
+        <!-- 27. Duy nhất 1 thẻ <h1> -->
+        <h1>Trang Liên Hệ</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Thông tin liên hệ</h2>
+            <p>Mọi người có thể gửi phản hồi qua form bên dưới hoặc liên hệ qua Email / SĐT.</p>
+        </section>
+
+        <section>
+            <h2>Gửi thông tin liên hệ</h2>
+            
+            <!-- Xử lý hiện hộp thoại thông báo alert khi nhấn Submit -->
+            <form onsubmit="event.preventDefault(); alert('GỬI THÔNG TIN THÀNH CÔNG!\n\n- Họ và tên: ' + document.getElementById('fullname').value + '\n- Ngày sinh: ' + document.getElementById('dob').value + '\n- Email: ' + document.getElementById('email').value + '\n- Số điện thoại: ' + document.getElementById('phone').value + '\n- Nội dung: ' + document.getElementById('message').value);">
+                
+                <!-- Fieldset 1: Thông tin cá nhân -->
+                <fieldset>
+                    <legend>Thông tin cá nhân</legend>
+                    
+                    <p>
+                        <label for="fullname">Họ và tên (*):</label><br>
+                        <input type="text" id="fullname" name="fullname" required minlength="2" placeholder="Nhập họ và tên">
+                    </p>
+
+                    <p>
+                        <label for="dob">Ngày sinh:</label><br>
+                        <input type="date" id="dob" name="dob">
+                    </p>
+
+                    <p>
+                        <label for="email">Email (*):</label><br>
+                        <input type="email" id="email" name="email" required placeholder="example@email.com">
+                    </p>
+
+                    <p>
+                        <label for="phone">Số điện thoại:</label><br>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{10,11}" placeholder="Nhập 10 - 11 chữ số" title="Số điện thoại phải gồm 10 hoặc 11 chữ số">
+                    </p>
+
+                    <p>
+                        <label for="university">Trường đại học:</label><br>
+                        <input type="text" id="university" name="university" list="university-list" placeholder="Chọn hoặc nhập tên trường">
+                        <datalist id="university-list">
+                            <option value="Trường Đại học Gia Định"></option>
+                            <option value="Trường Đại học FPT"></option>
+                            <option value="Trường Đại học Bách Khoa TP.HCM"></option>
+                        </datalist>
+                    </p>
+                </fieldset>
+
+                <!-- Fieldset 2: Nội dung liên hệ -->
+                <fieldset>
+                    <legend>Nội dung liên hệ</legend>
+
+                    <p>
+                        <label for="topic">Chủ đề liên hệ:</label><br>
+                        <select id="topic" name="topic">
+                            <option value="tu-van">Tư vấn học tập</option>
+                            <option value="hop-tac">Hợp tác công việc</option>
+                            <option value="gop-y">Góp ý ý kiến</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label>Kênh phản hồi ưu tiên:</label><br>
+                        <input type="radio" id="channel-email" name="contact_channel" value="email" checked>
+                        <label for="channel-email">Email</label>
+                        
+                        <input type="radio" id="channel-phone" name="contact_channel" value="phone">
+                        <label for="channel-phone">Điện thoại</label>
+                        
+                        <input type="radio" id="channel-zalo" name="contact_channel" value="zalo">
+                        <label for="channel-zalo">Zalo</label>
+                    </p>
+
+                    <p>
+                        <label for="message">Nội dung (*):</label><br>
+                        <textarea id="message" name="message" rows="5" required minlength="10" placeholder="Nhập nội dung tối thiểu 10 ký tự..."></textarea>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" id="agree" name="agree" required>
+                        <label for="agree">Tôi đồng ý với các điều khoản liên hệ (*)</label>
+                    </p>
+                </fieldset>
+
+                <!-- Nút gửi và xoá -->
+                <p>
+                    <button type="submit">Gửi thông tin</button>
+                    <button type="reset">Xoá</button>
+                </p>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <address>
+            Email: <a href="mailto:lenguyenthienloc10a1@gmail.com">lenguyenthienloc10a1@gmail.com</a><br>
+            Số điện thoại: <a href="tel:0359294214">0359 294 214</a>
+        </address>
+    </footer>
+
+</body>
+</html>

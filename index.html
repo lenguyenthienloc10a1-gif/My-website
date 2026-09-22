@@ -1,31 +1,55 @@
-<!DOCTYPE html>                         <!-- Khai báo đây là HTML5 --> 
-<html lang="vi">                        <!-- Thẻ gốc, chứa toàn bộ trang -->
-    <head>                              <!-- Phần đầu: Thông tin về trang -->
-        <meta charset="UTF-8">          <!--Cho phép hiển thị tiếng Việt -->
-         <meta name="viewport" content="width=device-vidth, initial-scale=1.0">
-         <title>Lê Nguyễn Thiện Lộc</title>   <!-- Tiêu đề trên tab trình duyệt -->
-               <link rel="stylesheet"  href="css/style.css">
-    </head>
-    <body>                              <!-- Phần thân: nội dung hiển thị -->
-         <h1>Lê Nguyễn Thiện Lộc</h1>
-         <h2>Thông tin cá nhân....</h2>
-         <p>Họ và Tên:  </strong>Lê Nguyễn Thiện Lộc</strong></p>
-         <p>Quê quán: Bình Thuận</p>
-         <p>Ngành học: Kỹ Thuật Phần Mềm</p>
-         <p>Năm học: Năm 2</p>
-         <h2>Sở thích</h2>
-         <ul>
-            <li>Thể thao</li>
-            <li>Du lịch</li>
-            <li>Ăn uống</li>
-         </ul>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 25. Title riêng biệt (50–60 ký tự, chứa tên) -->
+    <title>Trang Chủ Hồ Sơ Cá Nhân - Lê Nguyễn Thiện Lộc</title>
+    
+    <!-- 26. Meta description (150–160 ký tự, bắt đầu bằng hành động) -->
+    <meta name="description" content="Khám phá trang chủ hồ sơ cá nhân của Lê Nguyễn Thiện Lộc để tìm hiểu về định hướng học tập, kỹ năng lập trình Java, C++ và các dự án phát triển phần mềm.">
+    
+    <!-- 34 (Nâng cao). Open Graph Meta Tags -->
+    <meta property="og:title" content="Trang Chủ Hồ Sơ Cá Nhân - Lê Nguyễn Thiện Lộc">
+    <meta property="og:description" content="Khám phá trang chủ hồ sơ cá nhân của Lê Nguyễn Thiện Lộc để tìm hiểu về kỹ năng lập trình và định hướng phát triển phần mềm.">
+    <meta property="og:type" content="website">
+</head>
+<body>
 
+    <header>
+        <!-- 27. Mỗi trang chỉ có đúng 1 thẻ <h1> -->
+        <h1>Trang Chủ - Lê Nguyễn Thiện Lộc</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="about.html">Giới thiệu</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
 
-         <h2>Mục tiêu học kỳ này</h2>
-         <ol>
-            <li>Qua môn học kỳ này</li>
-            <li>Có thêm kiến thức về lập trình</li>
-            <li>Hoàn thành các bài tập được giao</li>
-         </ol>
-    </body>
+    <main>
+        <section>
+            <h2>Giới thiệu tổng quan</h2>
+            <p>Chào mừng bạn đến với website cá nhân của mình. Đây là nơi chia sẻ thông tin học tập và kỹ năng lập trình.</p>
+        </section>
+
+        <section>
+            <h2>Kỹ năng nổi bật</h2>
+            <ul>
+                <li>Lập trình Java / C++</li>
+                <li>Cơ sở dữ liệu (SQL)</li>
+                <li>Thiết kế giao diện Web cơ bản (HTML5 & CSS3)</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <address>
+            Email: <a href="mailto:lenguyenthienloc10a1@gmail.com">lenguyenthienloc10a1@gmail.com</a><br>
+            Số điện thoại: <a href="tel:0359294214">0359 294 214</a>
+        </address>
+    </footer>
+
+</body>
 </html>

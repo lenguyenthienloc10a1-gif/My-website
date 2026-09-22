@@ -1,17 +1,47 @@
+/* 1. CSS Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Cấu hình body & font chữ */
 body {
-    font-family: Arial, sans-serif;
-    background-color: aliceblue;
-    padding: 20px;
-}
-h1 {
-    color: blueviolet;
-    text-align: center;
-}
-h2{
-    color: brown;
-    border-bottom:2px solid black;
-}
-p{
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #1e293b;
     line-height: 1.6;
-    max-width:700px;
+}
+
+/* 3. Cấu hình header */
+header {
+    background-color: #1a2e5a;
+    padding: 16px 32px;
+    color: white;
+}
+
+header a {
+    color: white;
+}
+
+/* 4. Cấu hình main (căn giữa khung nội dung) */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 32px 16px;
+}
+
+/* 5. Cấu hình lớp .card (tạo khung dạng thẻ) */
+.card {
+    background: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px; /* Tạo khoảng cách giữa các card */
+}
+
+/* Thêm style cơ bản cho link */
+a:hover {
+    color: #1d6fa4;
+    text-decoration: none;
 }
